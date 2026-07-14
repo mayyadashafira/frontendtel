@@ -1,0 +1,151 @@
+@keyframes pageFadeInUp {
+from {
+opacity: 0;
+transform: translateY(14px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+from {
+opacity: 0;
+transform: scale(0.96);
+}
+to {
+opacity: 1;
+transform: scale(1);
+}
+}
+
+@keyframes slideInLeft {
+from {
+opacity: 0;
+transform: translateX(-16px);
+}
+to {
+opacity: 1;
+transform: translateX(0);
+}
+}
+
+.page-enter {
+animation: none;
+}
+
+.stagger-item {
+animation: pageFadeInUp 0.4s ease both;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.02s; }
+.stagger-item:nth-child(2) { animation-delay: 0.06s; }
+.stagger-item:nth-child(3) { animation-delay: 0.10s; }
+.stagger-item:nth-child(4) { animation-delay: 0.14s; }
+.stagger-item:nth-child(5) { animation-delay: 0.18s; }
+.stagger-item:nth-child(6) { animation-delay: 0.22s; }
+.stagger-item:nth-child(n+7) { animation-delay: 0.24s; }
+
+tbody tr {
+animation: fadeIn 0.35s ease both;
+}
+
+[class*="summary-card"],
+[class*="-card"]:not(.logout-modal) {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[class*="summary-card"]:hover {
+transform: translateY(-3px);
+}
+
+[class*="overview-grid"] > [class*="-card"]:hover,
+.storage-card:hover,
+.hw-card:hover,
+.network-card:hover,
+.peripherals-card:hover,
+.device-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 14px 28px rgba(20, 30, 70, 0.12);
+}
+
+button {
+transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+button:active:not(:disabled) {
+transform: scale(0.96);
+}
+
+.btn-add,
+.btn-primary,
+[class*="btn-save"],
+[class*="-btn-save"] {
+transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-add:hover:not(:disabled),
+.btn-primary:hover:not(:disabled),
+[class*="btn-save"]:hover:not(:disabled) {
+transform: translateY(-2px);
+box-shadow: 0 8px 18px rgba(37, 99, 235, 0.18);
+}
+
+.btn-view,
+.btn-edit,
+.btn-delete {
+transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-view:hover,
+.btn-edit:hover,
+.btn-delete:hover {
+transform: scale(1.15);
+}
+
+.nav-item,
+.submenu-item {
+transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+}
+
+.nav-item:hover {
+padding-left: 32px;
+}
+
+.nav-active {
+animation: slideInLeft 0.3s ease;
+}
+
+[class*="-year-drop"],
+[class*="-filter-drop"],
+[class*="-location-drop"] {
+animation: scaleIn 0.18s ease both;
+transform-origin: top;
+}
+
+.badge-broken {
+animation: badgePulse 2s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+0%, 100% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.0); }
+50% { box-shadow: 0 0 0 4px rgba(229, 57, 53, 0.12); }
+}
+
+.dash-loading-text {
+animation: fadeIn 0.3s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+animation-duration: 0.001ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: 0.001ms !important;
+}
+}

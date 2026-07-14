@@ -1,0 +1,269 @@
+.tel-ai {
+  --tel-navy: #1c3a63;
+  --tel-navy-soft: #3b5c85;
+  --tel-accent: #f5a623;
+  --tel-bubble: #eef2f8;
+  --tel-bubble-border: #d7e1ef;
+  --tel-white: #ffffff;
+  --tel-border: #b9cbe4;
+  --tel-radius-lg: 14px;
+  --tel-radius-full: 999px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.tel-ai *,
+.tel-ai *::before,
+.tel-ai *::after {
+  box-sizing: border-box;
+}
+
+.tel-ai-top {
+  padding: 4px 0 16px;
+}
+
+.tel-ai .dash-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tel-ai__thread {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 16px;
+}
+
+.tel-ai__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.tel-ai__row--ai {
+  justify-content: flex-start;
+}
+
+.tel-ai__row--user {
+  justify-content: flex-end;
+  align-self: flex-end;
+}
+
+.tel-ai__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: min(560px, 78%);
+}
+
+.tel-ai__row--user .tel-ai__group {
+  align-items: flex-end;
+}
+
+.tel-ai__sender-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--tel-navy);
+}
+
+.tel-ai__bubble {
+  background: var(--tel-bubble);
+  border: 1px solid var(--tel-bubble-border);
+  border-radius: var(--tel-radius-lg);
+  padding: 16px 20px;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.tel-ai__bubble p {
+  margin: 0 0 8px;
+}
+
+.tel-ai__bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.tel-ai__bubble--user {
+  background: var(--tel-white);
+}
+
+.tel-ai__avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--tel-white);
+  border: 1px solid var(--tel-border);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--tel-navy);
+}
+
+.tel-ai__avatar--ai {
+  color: #2ba8a0;
+}
+
+.tel-ai__suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: 48px;
+}
+
+.tel-ai__chip {
+  background: var(--tel-white);
+  border: 1px solid var(--tel-border);
+  border-radius: var(--tel-radius-full);
+  padding: 10px 18px;
+  font-family: inherit;
+  font-size: 13.5px;
+  color: var(--tel-navy);
+  cursor: pointer;
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.tel-ai__chip:hover {
+  background: #f5f9ff;
+}
+
+.tel-ai__chip:active {
+  transform: scale(0.98);
+}
+
+.tel-ai__chip:focus-visible,
+.tel-ai__send:focus-visible {
+  outline: 2px solid var(--tel-accent);
+  outline-offset: 2px;
+}
+
+.tel-ai__bubble--typing {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 14px 18px;
+}
+
+.tel-ai__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tel-navy-soft);
+  animation: tel-ai-bounce 1.1s infinite ease-in-out;
+}
+
+.tel-ai__dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.tel-ai__dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes tel-ai-bounce {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+  30% { transform: translateY(-4px); opacity: 1; }
+}
+
+.tel-ai__error {
+  color: #b3261e;
+  font-size: 13px;
+  margin: 0;
+}
+
+.tel-ai__composer {
+  padding-top: 12px;
+  border-top: 1px solid var(--tel-border);
+}
+
+.tel-ai__composer-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--tel-white);
+  border: 1px solid var(--tel-border);
+  border-radius: var(--tel-radius-full);
+  padding: 6px 6px 6px 20px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.tel-ai__composer-bar:focus-within {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.15);
+}
+
+.tel-ai__input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 14.5px;
+  color: var(--tel-navy);
+  padding: 10px 0;
+}
+
+.tel-ai__input::placeholder {
+  color: #8a9bb5;
+}
+
+.tel-ai__send {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #1e88e5;
+  color: var(--tel-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 120ms ease, opacity 120ms ease;
+}
+
+.tel-ai__send:hover:not(:disabled) {
+  background: #1976d2;
+}
+
+.tel-ai__send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tel-ai__disclaimer {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tel-navy);
+  margin: 12px 0 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .tel-ai__group {
+    max-width: 90%;
+  }
+
+  .tel-ai__suggestions {
+    margin-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tel-ai__chip,
+  .tel-ai__send,
+  .tel-ai__dot {
+    animation: none;
+    transition: none;
+  }
+}

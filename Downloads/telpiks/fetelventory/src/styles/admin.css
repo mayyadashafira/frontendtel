@@ -1,0 +1,571 @@
+.uam-page {
+flex: 1;
+min-height: 100vh;
+background-color: #dde2f5;
+padding: 28px 40px 60px;
+font-family: "Parastoo", sans-serif;
+color: #1f3a63;
+box-sizing: border-box;
+}
+
+.uam-page * {
+box-sizing: border-box;
+}
+
+.uam-header {
+display: flex;
+align-items: center;
+margin-bottom: 14px;
+}
+
+.uam-title {
+font-size:1.8rem;
+font-weight:700;
+color:#1a2e5a;
+margin: 0;
+}
+
+.uam-header-rule {
+height: 1px;
+background-color: #aebfd9;
+margin: 14px 0 28px;
+}
+
+.uam-profile-row {
+display: flex;
+align-items: stretch;
+gap: 24px;
+margin-bottom: 20px;
+flex-wrap: wrap;
+}
+
+.uam-stats-row {
+display: flex;
+align-items: stretch;
+gap: 24px;
+margin-bottom: 32px;
+flex-wrap: wrap;
+}
+
+.uam-profile {
+display: flex;
+align-items: center;
+gap: 18px;
+flex: 0 0 auto;
+}
+
+.uam-avatar {
+width: 92px;
+height: 92px;
+border-radius: 50%;
+background: #e0e4f0;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
+}
+
+.uam-profile-info {
+display: flex;
+flex-direction: column;
+gap: 4px;
+}
+
+.uam-profile-name {
+margin: 0;
+font-size: 18px;
+font-weight: 600;
+color: #1c3559;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+
+.uam-profile-email {
+margin: 0;
+font-size: 14px;
+color: #3e5a89;
+}
+
+.uam-stat-card {
+flex: 1;
+min-width: 180px;
+background-color: #ffffff;
+border-top: 4px solid transparent;
+border-radius: 12px;
+padding: 12px 16px;
+box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+
+.uam-stat-card--admin {
+border-top-color: #c23fb0;
+}
+
+.uam-stat-card--pending {
+border-top-color: #5fbf4f;
+}
+
+.uam-stat-card--registered {
+border-top-color: #2f6fd6;
+}
+
+.uam-stat-label {
+margin: 0;
+font-size: 13px;
+color: #666;
+font-weight: 400;
+}
+
+.uam-stat-value {
+margin-top: 8px;
+text-align: center;
+font-size: 22px;
+font-weight: 700;
+color: #1a2e5a;
+}
+
+.uam-panel {
+background:rgba(255,255,255,.75);
+border-radius: 14px;
+padding: 28px 28px 12px;
+margin-bottom: 28px;
+box-shadow: 0 1px 4px rgba(20, 40, 80, 0.06);
+}
+
+.uam-panel-header-row {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 16px;
+}
+
+.uam-panel-title {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 1.05rem;
+font-weight: 700;
+color: #1a2e5a;
+margin-bottom: 18px;
+}
+
+.uam-icon--warning {
+color: #e7b73b;
+}
+
+.uam-icon--user {
+color: #1c3559;
+}
+
+.uam-search {
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.uam-search input {
+width: 260px;
+padding: 9px 36px 9px 14px;
+border:1.5px solid #c5cbe8;
+border-radius:8px;
+background:rgba(255,255,255,.6);
+font-size:.88rem;
+color:#1a2e5a;
+font-family: inherit;
+}
+
+.uam-search input::placeholder {
+color: #9aa9c4;
+}
+
+.uam-search input:focus {
+outline: 2px solid #2f6fd6;
+outline-offset: 1px;
+}
+
+.uam-search-icon {
+position: absolute;
+right: 12px;
+color: #9aa9c4;
+pointer-events: none;
+}
+
+.uam-table-wrap {
+overflow-x: auto;
+}
+
+.uam-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.uam-table thead th {
+text-align: center;
+font-weight: 700;
+color: #1c3559;
+padding: 10px 12px;
+border-bottom: 1px solid #d7deeb;
+white-space: nowrap;
+vertical-align: middle;
+font-size: 14px;
+}
+
+.uam-table tbody td {
+padding: 16px 12px;
+border-bottom: 1px solid #e7ecf4;
+color: #333;
+vertical-align: middle;
+text-align: center;
+font-size: 14px;
+font-weight: 700;
+}
+
+.uam-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.uam-col-no {
+width: 48px;
+}
+
+.uam-empty-row {
+text-align: center;
+color: #8a9bbd;
+padding: 24px 12px;
+}
+
+.uam-action-buttons {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+}
+
+.uam-action-none {
+color: #9aa9c4;
+font-weight: 700;
+}
+
+.uam-btn {
+all: unset;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-family: inherit;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 0.03em;
+padding: 8px 16px;
+border-radius: 4px;
+cursor: pointer;
+color: #ffffff;
+transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.uam-btn:hover {
+transform: scale(1.08);
+filter: brightness(0.93);
+}
+
+.uam-btn:active {
+transform: scale(.95);
+}
+
+.uam-btn--approve {
+background-color: #43a047;
+color: white;
+min-width: 70px;
+padding: 6px 16px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 600;
+white-space: nowrap;
+}
+
+.uam-btn--reject {
+background-color: #e53935;
+color: white;
+min-width: 70px;
+padding: 6px 16px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 600;
+white-space: nowrap;
+}
+
+.uam-status-badge {
+padding: 6px 16px;
+border-radius: 4px;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 0.03em;
+color: #ffffff;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+min-width: 90px;
+}
+
+.uam-status-badge--admin {
+background-color: #44608f;
+color: white;
+min-width: 70px;
+padding: 6px 16px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 600;
+white-space: nowrap;
+}
+
+.uam-status-badge--guest {
+background-color: #f0c419;
+color: #5a4a00;
+min-width: 70px;
+padding: 6px 16px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 600;
+white-space: nowrap;
+}
+
+.uam-status-badge--superuser {
+background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+color: white;
+min-width: 70px;
+padding: 6px 16px;
+border-radius: 999px;
+font-size: 13px;
+font-weight: 700;
+white-space: nowrap;
+letter-spacing: 0.3px;
+}
+
+.uam-icon-btn {
+all: unset;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 38px;
+height: 38px;
+cursor: pointer;
+border-radius: 10px;
+color: #ffffff;
+box-shadow: 0 2px 5px rgba(20, 40, 80, 0.15);
+transition: transform .15s ease, filter .15s ease, box-shadow .2s ease;
+}
+
+.uam-icon-btn:hover{
+transform: scale(1.08);
+filter: brightness(0.95);
+}
+
+.uam-icon-btn:active{
+transform: scale(.95);
+}
+
+.uam-icon-btn:disabled {
+opacity: .45;
+cursor: not-allowed;
+transform: none;
+filter: none;
+}
+
+.uam-icon-btn--view {
+background-color: #2f80e6;
+}
+
+.uam-icon-btn--edit {
+background-color: #f0a83c;
+}
+
+.uam-icon-btn--remove {
+background-color: #e5484d;
+}
+
+.uam-modal-overlay {
+position: fixed;
+inset: 0;
+background-color: rgba(15, 30, 60, 0.45);
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 24px;
+z-index: 1000;
+}
+
+.uam-modal {
+position: relative;
+background-color: #ffffff;
+border-radius: 16px;
+width: 100%;
+max-width: 760px;
+padding: 32px 36px 32px;
+box-shadow: 0 12px 40px rgba(10, 25, 55, 0.25);
+}
+
+.uam-modal-header-row {
+display: flex;
+align-items: flex-start;
+justify-content: space-between;
+gap: 16px;
+}
+
+.uam-modal-close {
+all: unset;
+flex-shrink: 0;
+width: 40px;
+height: 40px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+background-color: #e7ebf8;
+color: #1c3559;
+border-radius: 10px;
+cursor: pointer;
+transition: background-color .15s ease, transform .15s ease;
+}
+
+.uam-modal-close:hover {
+background-color: #d7deef;
+}
+
+.uam-modal-close:active {
+transform: scale(.93);
+}
+
+.uam-modal-title {
+margin: 0;
+font-size: 24px;
+font-weight: 700;
+color: #1c3559;
+}
+
+.uam-modal-rule {
+height: 1px;
+background-color: #dde3f0;
+margin: 20px 0 28px;
+}
+
+.uam-required {
+color: #e5484d;
+margin-left: 2px;
+}
+
+.uam-modal-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 22px 32px;
+}
+
+.uam-field {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.uam-field label {
+font-size: 14px;
+font-weight: 700;
+color: #1c3559;
+}
+
+.uam-field input {
+padding: 13px 16px;
+border: 1.5px solid #ccd6ee;
+border-radius: 10px;
+font-family: inherit;
+font-size: 14px;
+color: #1c3559;
+background-color: #eef1fb;
+}
+
+.uam-field select {
+padding: 13px 16px;
+border: 1.5px solid #ccd6ee;
+border-radius: 10px;
+font-family: inherit;
+font-size: 14px;
+color: #1c3559;
+background-color: #eef1fb;
+appearance: none;
+background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%232f4a8c' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+background-repeat: no-repeat;
+background-position: right 14px center;
+}
+
+.uam-field input::placeholder {
+color: #9aa9c4;
+}
+
+.uam-field select:focus {
+outline: 2px solid #2f6fd6;
+outline-offset: 1px;
+}
+
+.uam-field input:focus {
+outline: 2px solid #2f6fd6;
+outline-offset: 1px;
+}
+
+.uam-field input:disabled,
+.uam-field select:disabled {
+opacity: .65;
+cursor: not-allowed;
+}
+
+.uam-modal-actions {
+display: flex;
+justify-content: flex-end;
+gap: 14px;
+margin-top: 32px;
+}
+
+.uam-btn--cancel {
+background-color: #e9edf7;
+color: #2f4a8c;
+padding: 12px 28px;
+font-weight: 700;
+border-radius: 999px;
+}
+
+.uam-btn--save {
+background-color: #2f4ec4;
+color: #ffffff;
+padding: 12px 28px;
+font-weight: 700;
+border-radius: 999px;
+}
+
+@media (max-width: 900px) {
+.uam-page {
+padding: 20px;
+}
+
+.uam-profile-row {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.uam-stats-row {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.uam-stat-card {
+width: 100%;
+}
+
+.uam-panel-header-row {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.uam-search input {
+width: 100%;
+}
+
+.uam-modal-grid {
+grid-template-columns: 1fr;
+}
+}

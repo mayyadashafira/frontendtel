@@ -1,0 +1,117 @@
+.storage-overview-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+margin-bottom: 1.5rem;
+}
+
+.storage-card {
+background: white;
+border-radius: 12px;
+padding: 1.5rem;
+position: relative;
+display: flex;
+flex-direction: column;
+min-height: 240px;
+}
+
+.storage-card.red    { border-top: 6px solid #e53935; }
+.storage-card.yellow { border-top: 6px solid #ffea00; }
+.storage-card.green  { border-top: 6px solid #43c943; }
+.storage-card.blue   { border-top: 6px solid #42a5f5; }
+
+.storage-card-header {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 1rem;
+}
+
+.storage-card-header h3 { margin: 0; color: #1a2e5a; }
+.storage-card p { color: #333; font-weight: 700; margin: 8px 0; }
+
+.storage-btn {
+margin-top: 1rem;
+border: none;
+background: #ff9f28;
+color: white;
+font-weight: 700;
+padding: 10px 16px;
+border-radius: 8px;
+cursor: pointer;
+transition: transform .15s ease, box-shadow .2s ease;
+font-size: 16px;
+margin-top: auto;
+align-self: flex-end;
+}
+
+.storage-btn:hover{
+transform: scale(1.08);
+filter: brightness(0.93);
+}
+
+.storage-btn:active{
+transform: scale(.95);
+}
+
+.bar-list { display: flex; flex-direction: column; gap: 0.85rem; }
+
+.bar-row { display: flex; align-items: center; gap: 0.75rem; }
+
+.bar-label {
+width: 200px;
+flex-shrink: 0;
+font-size: 0.82rem;
+color: #333; 
+margin: 0;
+}
+
+.bar-track {
+flex: 1;
+height: 14px;
+background: #e4e8f5;
+border-radius: 99px;
+overflow: hidden;
+}
+
+.bar-fill {
+height: 100%;
+border-radius: 99px;
+transition: width 0.4s ease;
+}
+
+.bar-pct {
+width: 36px;
+text-align: right;
+font-size: 0.82rem;
+font-weight: 600;
+}
+
+.section {
+background: rgba(255,255,255,0.7);
+border-radius: 14px;
+padding: 1.25rem 1.5rem;
+margin-bottom: 1rem;
+}
+
+.section-title {
+font-size: 1.05rem;
+font-weight: 700;
+color: #1a2e5a;
+margin: 0 0 1rem;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.bar-label {
+display: flex;
+align-items: center;
+gap: 10px;
+font-weight: 600;
+color: #1a2e5a;
+}
+
+.bar-label svg {
+flex-shrink: 0;
+}
